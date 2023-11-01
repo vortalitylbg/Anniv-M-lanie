@@ -1,0 +1,40 @@
+body {
+    background-color: #709CA7;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #B8CBD0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #7A90A4;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #137C8B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #344D59;
+}
+
+#errorMessage {
+    color: red;
+}
+

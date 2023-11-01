@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="styleForum.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Forum</h1>
+        <h2>Bienvenue, <span id="user"></span> !</h2>
+        <label for="message">Message :</label>
+        <textarea id="message" rows="4"></textarea>
+
+        <label for="image">Image :</label>
+        <input type="file" id="imageInput">
+        
+        <button onclick="envoyerMessage()">Envoyer</button>
+        
+        <div id="messages">
+            <!-- Les messages seront affichés ici -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
