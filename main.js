@@ -104,3 +104,13 @@ document.getElementById("message").value = "";
 imageInput.value = "";
 }
 }
+// Écoutez les changements en temps réel dans la collection "messages" et affichez-les
+db.collection("messages").orderBy("timestamp").onSnapshot(function(snapshot) {
+    snapshot.docChanges().forEach(function(change) {
+        if (change.type === "added") {
+            var messageData = change.doc.data();
+            // Afficher le message dans votre interface utilisateur.
+        }
+    });
+});
+
