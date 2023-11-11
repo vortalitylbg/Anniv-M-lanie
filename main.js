@@ -66,6 +66,23 @@ const userElement = document.createElement("div");
 userElement.classList.add("user");
 userElement.innerHTML = `<strong>${user.prenom} ${user.nom}:</strong>`;
 
+const messageData = {
+            prenom: user.prenom,
+            nom: user.nom,
+            message: message,
+            timestamp: new Date(),
+            // Enregistrez ici les médias (par exemple, l'URL de l'image).
+        };
+db.collection("messages").add(messageData)
+            .then(function(docRef) {
+                console.log("Message ajouté avec l'ID : ", docRef.id);
+                document.getElementById("message").value = "";
+                imageInput.value = "";
+            })
+            .catch(function(error) {
+                console.error("Erreur lors de l'ajout du message : ", error);
+            });
+
 messageContainer.appendChild(userElement);
 
 if (message) {
