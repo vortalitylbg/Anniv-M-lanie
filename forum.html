@@ -25,5 +25,28 @@
     </div>
 
     <script src="main.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyB9DhcFepyEU4zl3-HiVsXE_CdT-O7o-UQ",
+          authDomain: "maman-anniv.firebaseapp.com",
+          projectId: "maman-anniv",
+          storageBucket: "maman-anniv.appspot.com",
+          messagingSenderId: "944300768745",
+          appId: "1:944300768745:web:c5f39be96e62065f7adf78",
+          measurementId: "G-33GCY3KT5Y"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 </html>
